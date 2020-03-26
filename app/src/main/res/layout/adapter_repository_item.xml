@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutContent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@color/bg"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:id="@+id/tvName"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            tools:text="name cua "
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            android:id="@+id/llDescription"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvDescriptionTitle"
+                android:layout_width="75dp"
+                android:text="@string/description"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                tools:text="name cua "
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvLanguageTitle"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/llDescription"
+            app:layout_constraintTop_toBottomOf="@+id/llDescription"
+            android:text="@string/language"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvLanguage"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toEndOf="@+id/tvLanguageTitle"
+            app:layout_constraintTop_toBottomOf="@+id/llDescription"
+            tools:text="C"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvUpdateAt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llDescription"
+            tools:text="25/3/2010"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/imgStar"
+            android:layout_marginTop="@dimen/margin_text"
+            app:layout_constraintTop_toBottomOf="@+id/tvLanguageTitle"
+            app:layout_constraintStart_toStartOf="@+id/tvLanguageTitle"
+            android:src="@drawable/ic_star"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/margin_text"
+            android:id="@+id/tvStar"
+            app:layout_constraintStart_toEndOf="@+id/imgStar"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvLanguageTitle"
+            tools:text="45"
+            android:layout_height="wrap_content"/>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/margin_text"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLanguageTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_eye"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tvWatches"
+                tools:text="86"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/margin_text"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvLanguageTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_folk"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tvFolk"
+                tools:text="86"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
